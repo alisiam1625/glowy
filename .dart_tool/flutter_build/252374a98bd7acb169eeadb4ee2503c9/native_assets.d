@@ -1,0 +1,1 @@
+ H:\\App__2024\\glowy\\.dart_tool\\flutter_build\\252374a98bd7acb169eeadb4ee2503c9\\native_assets.yaml: 
