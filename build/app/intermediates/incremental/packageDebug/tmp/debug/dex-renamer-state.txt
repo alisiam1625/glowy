@@ -1,4 +1,4 @@
-#Sun Dec 15 11:30:36 EET 2024
+#Sun Dec 15 12:31:17 EET 2024
 base.0=H\:\\App__2024\\glowy\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=H\:\\App__2024\\glowy\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=H\:\\App__2024\\glowy\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex

@@ -49,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage>
     // double currentProgress = 500.5;
 
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
         child: SizedBox(
           width: 300,
@@ -56,12 +57,20 @@ class _MyHomePageState extends State<MyHomePage>
           child: Anmationn(
             
               child: Center(
-                child: Text(
-                  "hello word",
-                  style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                child: Container(
+                  color: Colors.white,
+                  width: double.infinity,
+                  height: double.infinity,
+                  child: Center(
+                    child: Text(
+                      
+                      "Hello Word",
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                  ),
                 ),
               )),
         ),
@@ -220,7 +229,7 @@ late AnimationController con;
               ? ClipRRect(
                   borderRadius:
                       BorderRadius.all(Radius.circular(widget.radius)),
-                  child: widget.child!,
+                  child: widget.child,
                 )
               : const SizedBox.shrink(),
           ClipPath(
@@ -298,8 +307,7 @@ class _CenterCutpsath extends CustomClipper<Path> {
 
   @override
   Path getClip(Size size) {
-    final rect =
-        Rect.fromLTRB(size.width, size.width, size.width * 2, size.height * 2);
+    Rect rect = Rect.fromLTRB(-size.width, -size.width, size.width * 2, size.height * 2);
     final double width = size.width - thickness * 2;
     final double height = size.height - thickness * 2;
     final path = Path()
@@ -310,7 +318,7 @@ class _CenterCutpsath extends CustomClipper<Path> {
           Radius.circular(redius - thickness),
         ),
       )
-      ..addRRect(RRect.fromRectAndRadius(rect, Radius.circular(redius)));
+      ..addRect(rect);
 
     return path;
   }
